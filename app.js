@@ -11,14 +11,14 @@ class Student{
 
 }
 
-function calculateAvg(Student){
+function calculateAvg(student){
     
-    let result = ((Student.grade1 + Student.grade2)/2).toFixed(1);
+    let result = ((student.grade1 + student.grade2)/2).toFixed(1);
 
     if(result >= 7)
-        alert(`Parabéns, ${Student.studentName}! Você foi aprovado(a) com a media ${result}`)
+        alert(`Parabéns, ${student.studentName}! Você foi aprovado(a) com a media ${result}`)
     else
-        alert(`Não foi dessa vez, ${Student.studentName}! Você foi reprovado(a) com a media ${result}`)
+        alert(`Não foi dessa vez, ${student.studentName}! Você foi reprovado(a) com a media ${result}`)
 }
 
 students.push(new Student("John", 7, 9));
@@ -29,6 +29,6 @@ students.push(new Student("Jane", 4, 9));
 alert(`Olá! Este é um pequeno código que utiliza um array de estudantes da classe Student para calcular suas médias e verificar se foi aprovado(a) ou não!
 Tudo é feito interiormente, mostrando apenas os resultados finais. Fique à vontade para verificar o código!`)
 
-for(i = 0; i < students.length; i++){
-    calculateAvg(students[i]);
+for(stu of students){
+    calculateAvg(stu);
 }
